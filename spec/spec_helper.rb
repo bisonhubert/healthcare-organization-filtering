@@ -31,3 +31,11 @@ RSpec.configure do |config|
 
   # config.order = :random
 end
+
+# Needed to configure shoulda matchers, otherwise validate_presence_of returns NoMethodError.
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
