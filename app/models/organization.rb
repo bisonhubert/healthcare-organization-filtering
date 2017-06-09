@@ -1,4 +1,5 @@
 class Organization < ActiveRecord::Base
+  before_save { eligibilities.map!(&:downcase) }
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
   validates :eligibilities, presence: true

@@ -16,4 +16,10 @@ describe Organization, type: :model do
 
     it { is_expected.to validate_presence_of(:eligibilities) }
   end
+
+  it "saves eligibilities as lower-case" do
+    mixed_case_eligibility = "gEnErIc ElIgIbIlItY"
+    organization = FactoryGirl.create(:organization, eligibilities: [mixed_case_eligibility])
+    expect(organization.eligibilities.first).eql?(mixed_case_eligibility.downcase)
+  end
 end
