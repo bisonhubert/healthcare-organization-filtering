@@ -23,13 +23,8 @@ class FilterOrganization
     filtered_organizations
   end
 
+
   def exclusive_filter
-    filtered_organizations = []
-    @organizations.each do |organization|
-      if organization.eligibilities.sort == @eligibilities.sort
-        filtered_organizations.push(organization)
-      end
-    end
-    filtered_organizations
+    @organizations.select { |org| org[:eligibilities] & @eligibilities == @eligibilities }
   end
 end

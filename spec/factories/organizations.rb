@@ -9,7 +9,7 @@ FactoryGirl.define do
     end
 
     trait :update_multiple_eligibilities do
-      eligibilities ["Youth", "LGBT"]
+      eligibilities ["Youth", "LGBT", "Transgender"]
     end
   end
 end
