@@ -1,9 +1,0 @@
-<%= form_tag(organizations_path, method: :get) do %>
-  <% @eligibilities_list.each_with_index do |eligibility, indx| %>
-    <div>
-      <%= check_box_tag("eligibilities[]", eligibility, false, :id => indx + 1) %>
-      <%= label_tag indx + 1, eligibility %>
-    </div>
-  <% end %>
-  <%= submit_tag("Apply Filter") %>
-<% end %>
