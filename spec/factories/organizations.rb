@@ -4,8 +4,12 @@ FactoryGirl.define do
     description "This is a generic description."
     eligibilities ["Youth"]
 
-    trait :update_eligibility do
+    trait :update_single_eligibility do
       eligibilities ["LGBT"]
+    end
+
+    trait :update_multiple_eligibilities do
+      eligibilities ["Youth", "LGBT"]
     end
   end
 end
