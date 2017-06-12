@@ -15,4 +15,14 @@ class FilterOrganizations
     end
     filtered_organizations
   end
+
+  def filter_by_and
+    filtered_organizations = []
+    @organizations.each do |organization|
+      if organization.eligibilities.sort == @eligibilities.sort
+        filtered_organizations.push(organization)
+      end
+    end
+    filtered_organizations
+  end
 end
