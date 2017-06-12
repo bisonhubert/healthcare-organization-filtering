@@ -1,10 +1,17 @@
-class FilterOrganizations
+class FilterOrganization
   def initialize(params)
     @organizations = params[:organizations]
     @eligibilities = params[:eligibilities]
+    @query_type = params[:q]
   end
 
-  def filter_by_or
+  def call
+    @query_type == 'inclusive' ? inclusive_filter : exclusive_filter
+  end
+
+  private
+    
+  def inclusive_filter
     filtered_organizations = []
     @organizations.each do |organization|
       organization.eligibilities.each do |eligibility|
@@ -16,7 +23,7 @@ class FilterOrganizations
     filtered_organizations
   end
 
-  def filter_by_and
+  def exclusive_filter
     filtered_organizations = []
     @organizations.each do |organization|
       if organization.eligibilities.sort == @eligibilities.sort
