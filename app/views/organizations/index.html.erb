@@ -1,13 +1,17 @@
 <% provide(:title, "Resource Search") %>
 
 <header class="site_header">
-  <h1 class="first_heading"><%= yield(:title) %></h1>
+  <h1 class="page_heading"><%= yield(:title) %></h1>
 </header>
 
-<div>
-  <%= render "eligibility_filters" %>
-</div>
+<main>
+  <section class="eligibility_filters">
+    <%= render "eligibility_filters" %>
+  </section>
 
-<ul>
-  <%= render @organizations %>
-</ul>
+  <section class="organizations">
+    <ul class="organizations_list">
+      <%= render @organizations %>
+    </ul>
+  </section>
+</main>

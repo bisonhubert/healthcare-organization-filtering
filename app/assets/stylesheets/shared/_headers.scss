@@ -1,10 +1,11 @@
 .site_header {
-  padding: 30px 0 15px 60px;
   background-color: $header-background-color;
-
-  .first_heading {
+  
+  .page_heading {
+    text-align: center;
     margin: 0;
-    font-size: 1.5em;
+    padding: 25px 0;
+    font-size: 2em;
     font-family: sans-serif;
     font-weight: 200;
     color: $light-text;

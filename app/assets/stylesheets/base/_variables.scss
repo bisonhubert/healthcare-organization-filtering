@@ -8,7 +8,15 @@ $header-background-color: $blue;
 $button-color: $blue;
 $dark-text: $black;
 $filter-text: $dark-grey;
-$content-border: $dark-grey;
+$content-border: $medium-grey;
 $light-text: $light-grey;
 $main-background: $light-grey;
 $content-background: $white;
+
+
+
+//=======================
+//== Media Query Units ==
+//=======================
+
+$widescreen-monitor: 1280px;

@@ -1,0 +1,49 @@
+main {
+  background-color: $main-background;
+  .eligibility_filters {
+    width: 100%;
+    padding-top: 25px;
+
+    .section_heading {
+      text-align: center;
+      margin: 0;
+      padding-bottom: 15px;
+      color: $dark-text;
+      font-size: 1.2em;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .filter_form {
+      margin: 0 auto;
+      width: 50%;
+
+      .filter_type {
+        background-color: $content-background;
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $content-border;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+
+        .check_box {
+          margin-left: 15px;
+        }
+
+        .filter_label {
+          margin-left: 5px; 
+          color: $filter-text;
+          font-size: 1em;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+// laptop
+@media only screen and (min-width: $widescreen-monitor) {
+
+}
