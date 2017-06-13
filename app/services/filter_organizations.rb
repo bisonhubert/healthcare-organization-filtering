@@ -1,4 +1,4 @@
-class FilterOrganization
+class FilterOrganizations
   def initialize(params = {})
     @organizations = params[:organizations]
     @eligibilities = params[:eligibilities]

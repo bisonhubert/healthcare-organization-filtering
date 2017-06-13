@@ -7,6 +7,6 @@ class Organization < ActiveRecord::Base
 
   def self.filter_organizations(params = {})
     @organizations = Organization.all
-    FilterOrganization.new({organizations: @organizations, eligibilities: params[:eligibilities], query_type: params[:query_type]}).call
+    FilterOrganizations.new({organizations: @organizations, eligibilities: params[:eligibilities], query_type: params[:query_type]}).call
   end
 end
