@@ -7,4 +7,8 @@ RSpec.describe Location, type: :model do
     it { is_expected.to validate_presence_of(:state) }
     it { is_expected.to validate_presence_of(:zipcode) }
   end
+
+  describe "associations" do
+    it { should belong_to(:organization) }
+  end
 end

@@ -12,4 +12,8 @@ describe Eligibility, type: :model do
       expect(eligibility).to_not be_valid
     end
   end
+
+  describe "associations" do
+    it { should have_and_belong_to_many(:organizations) }
+  end
 end

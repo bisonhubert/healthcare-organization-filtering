@@ -1,10 +1,9 @@
 class Organization < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true
-  validates :eligibilities, presence: true
-  serialize :eligibilities, Array
 
   has_many :locations
+  has_and_belongs_to_many :eligibilities
 
   def self.filter_organizations(params = {})
     @organizations = Organization.all
