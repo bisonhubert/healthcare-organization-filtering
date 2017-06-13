@@ -1,19 +1,22 @@
 <%= form_tag(organizations_path, method: :get) do %>
+  <div>
+    <%= label_tag "Filters" %>
+  </div>
   <% @eligibilities_list.each_with_index do |eligibility, indx| %>
     <div>
       <%= check_box_tag("eligibilities[]", eligibility, false, :id => indx + 1) %>
       <%= label_tag indx + 1, eligibility %>
     </div>
   <% end %>
-  <div>
-    <span>
+  <div class="form_submit_wrapper">
+    <span class="form_options">
       <%= radio_button_tag("q", "inclusive", true) %>
       <%= label_tag "q_inclusive", "Apply Any" %>
     </span>
-    <span>
+    <span class="form_options">
       <%= radio_button_tag("q", "exclusive", false) %>
       <%= label_tag "q_exclusive", "Apply All" %>
     </span>
-    <%= submit_tag("Apply Filter") %>
+    <%= submit_tag("Apply Filter", id: "form_submit") %>
   </div>
 <% end %>

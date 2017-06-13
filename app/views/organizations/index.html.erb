@@ -1,6 +1,8 @@
-<% provide(:title, "All Organizations") %>
+<% provide(:title, "Resource Search") %>
 
-<h1>All Organizations</h1>
+<header class="site_header">
+  <h1 class="first_heading"><%= yield(:title) %></h1>
+</header>
 
 <div>
   <%= render "eligibility_filters" %>
