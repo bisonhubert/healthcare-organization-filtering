@@ -4,17 +4,17 @@
       <% Eligibility.all.each do |eligibility| %>
         <div class="filter_type">
           <%= check_box_tag("eligibilities[]", eligibility.name, false, :id => eligibility.id, class: "check_box" ) %>
-          <%= label_tag eligibility.id, eligibility.name, class: "filter_label" %>
+          <%= label_tag(eligibility.id, eligibility.name, class: "filter_label") %>
         </div>
       <% end %>
       <div class="form_options_wrapper">
         <span class="form_options">
           <%= radio_button_tag("query_type", "inclusive", true) %>
-          <%= label_tag "query_type_inclusive", "Apply Any" %>
+          <%= label_tag("query_type_inclusive", "Apply Any") %>
         </span>
         <span class="form_options">
           <%= radio_button_tag("query_type", "exclusive", false) %>
-          <%= label_tag "query_type_exclusive", "Apply All" %>
+          <%= label_tag("query_type_exclusive", "Apply All") %>
         </span>
       </div>
       <div class="form_submit">
