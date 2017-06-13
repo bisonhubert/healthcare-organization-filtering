@@ -1,0 +1,28 @@
+main {
+  width: 100%;
+  text-align: center;
+  
+  .organization_details {
+    padding-bottom: 25px;
+    margin: 0 auto;
+    width: 80%;
+    
+    .organization_attribute {
+      padding-top: 25px;
+      letter-spacing: 0.3px;
+      line-height: 1.3;
+
+      .attribute_header {
+        color: $dark-text;
+
+      }
+        .attribute_content {
+          color: $dark-text;
+        }
+    }
+
+  }
+  .navigation_link {
+    color: $button-color;
+  }
+}
