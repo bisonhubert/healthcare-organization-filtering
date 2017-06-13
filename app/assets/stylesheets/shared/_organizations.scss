@@ -37,3 +37,30 @@
     }
   }
 }
+
+
+
+// laptop
+@media only screen and (min-width: $widescreen-monitor) {
+  main {
+    display: flex;
+    
+    .organizations {
+      width: 1;
+      padding-top: 67px;
+
+      .organizations_list {
+        width: 80%;
+
+        .organization_wrapper {
+          text-align: left;
+          padding: 15px 0 15px 20px;
+
+          .organization_name {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

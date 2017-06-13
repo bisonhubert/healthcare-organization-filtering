@@ -6,7 +6,7 @@
     text-align: center;
     margin: 0;
     padding-bottom: 15px;
-    color: $dark-text;
+    color: $third-heading-text;
     font-size: 1.2em;
     font-weight: 400;
     letter-spacing: 1px;
@@ -44,6 +44,8 @@
 
       .form_options {
         margin: 10px;
+        letter-spacing: 1px;
+        color: $dark-text;
       }
     }
   }
@@ -52,9 +54,13 @@
 
 // laptop
 @media only screen and (min-width: $widescreen-monitor) {
+  main {
+    display: flex;
+
   .eligibility_filters {
     width: 30%;
     padding-left: 150px;
+
 
     .section_heading {
       text-align: left;
@@ -80,4 +86,5 @@
       }
     }
   } 
+  }
 }
