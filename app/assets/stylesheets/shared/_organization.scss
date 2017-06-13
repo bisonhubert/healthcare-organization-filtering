@@ -1,14 +1,14 @@
 main {
   width: 100%;
-  text-align: center;
-  
+
   .organization_details {
-    padding-bottom: 25px;
+    padding-top: 25px;
     margin: 0 auto;
     width: 80%;
+    text-align: center;
     
     .organization_attribute {
-      padding-top: 25px;
+      padding-bottom: 25px;
       letter-spacing: 0.3px;
       line-height: 1.3;
 
@@ -16,13 +16,29 @@ main {
         color: $dark-text;
 
       }
-        .attribute_content {
-          color: $dark-text;
-        }
+
+      .attribute_content {
+        color: $dark-text;
+      }
+    }
+  
+    .navigation_link {
+      color: $button-color;
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: $widescreen-monitor) {
+  main {
+    .organization_details {
+      text-align: left;
+      padding-left: 25px;
     }
 
-  }
-  .navigation_link {
-    color: $button-color;
+    .attribute_content {
+      width: 75%;
+    }
   }
 }
