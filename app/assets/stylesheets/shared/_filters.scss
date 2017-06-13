@@ -16,7 +16,7 @@ main {
 
     .filter_form {
       margin: 0 auto;
-      width: 50%;
+      width: 60%;
 
       .filter_type {
         background-color: $content-background;
@@ -37,6 +37,15 @@ main {
           color: $filter-text;
           font-size: 1em;
           letter-spacing: 1px;
+        }
+      }
+
+      .form_options_wrapper {
+        padding: 10px;
+        text-align: center;
+
+        .form_options {
+          margin: 10px;
         }
       }
     }
