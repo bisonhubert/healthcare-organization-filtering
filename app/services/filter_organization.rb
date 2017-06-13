@@ -16,11 +16,15 @@ class FilterOrganization
   end
     
   def inclusive_filter
-    @organizations.select { |org| (org.eligibilities & @eligibilities).any? }
+    @organizations.select { |org| (get_eligibility_names(org.eligibilities) & @eligibilities).any? }
   end
 
 
   def exclusive_filter
-    @organizations.select { |org| org.eligibilities & @eligibilities == @eligibilities }
+    @organizations.select { |org| get_eligibility_names(org.eligibilities) & @eligibilities == @eligibilities }
+  end
+
+  def get_eligibility_names(eligibilities)
+    eligibilities.map(&:name)
   end
 end

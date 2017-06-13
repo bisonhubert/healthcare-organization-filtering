@@ -2,10 +2,10 @@
   <div>
     <%= label_tag "Filters" %>
   </div>
-  <% @eligibilities_list.each_with_index do |eligibility, indx| %>
+  <% Eligibility.all.each do |eligibility| %>
     <div>
-      <%= check_box_tag("eligibilities[]", eligibility, false, :id => indx + 1) %>
-      <%= label_tag indx + 1, eligibility %>
+      <%= check_box_tag("eligibilities[]", eligibility.name, false, :id => eligibility.id) %>
+      <%= label_tag eligibility.id, eligibility.name %>
     </div>
   <% end %>
   <div class="form_submit_wrapper">
