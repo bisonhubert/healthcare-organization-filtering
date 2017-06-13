@@ -21,7 +21,6 @@
       width: 100%;
       padding: 10px 0;
       margin: 10px 0;
-      // margin-bottom: 10px;
       border: 1px solid $content-border;
       -webkit-border-radius: 5px;
       border-radius: 5px;
@@ -40,6 +39,7 @@
 
     .form_options_wrapper {
       padding: 10px;
+      margin-bottom: 10px;
       text-align: center;
 
       .form_options {
@@ -68,6 +68,15 @@
 
       .filter_type {
         margin-bottom: 15px;
+      }
+
+      .form_options_wrapper {
+        margin-bottom: 15px;
+        text-align: right;
+
+        .form_options {
+          margin: 10px;
+        }
       }
     }
   } 
