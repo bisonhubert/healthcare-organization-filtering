@@ -12,3 +12,15 @@
     letter-spacing: 1px;
   } 
 }
+
+
+
+// laptop
+@media only screen and (min-width: $widescreen-monitor) {
+  .site_header {
+    .page_heading {
+      text-align: left;
+      padding: 75px 0 25px 150px;
+    }
+  }
+}
