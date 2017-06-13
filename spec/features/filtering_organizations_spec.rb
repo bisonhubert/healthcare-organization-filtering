@@ -43,7 +43,7 @@ describe "Filtering organizations" do
 
     check(1)
     check(2)
-    choose("q_exclusive")
+    choose("query_type_exclusive")
     click_button("Apply Filter")
 
     expect(page).not_to have_content(organization.name)

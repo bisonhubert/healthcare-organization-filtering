@@ -10,12 +10,12 @@
   <% end %>
   <div class="form_submit_wrapper">
     <span class="form_options">
-      <%= radio_button_tag("q", "inclusive", true) %>
-      <%= label_tag "q_inclusive", "Apply Any" %>
+      <%= radio_button_tag("query_type", "inclusive", true) %>
+      <%= label_tag "query_type_inclusive", "Apply Any" %>
     </span>
     <span class="form_options">
-      <%= radio_button_tag("q", "exclusive", false) %>
-      <%= label_tag "q_exclusive", "Apply All" %>
+      <%= radio_button_tag("query_type", "exclusive", false) %>
+      <%= label_tag "query_type_exclusive", "Apply All" %>
     </span>
     <%= submit_tag("Apply Filter", id: "form_submit") %>
   </div>
