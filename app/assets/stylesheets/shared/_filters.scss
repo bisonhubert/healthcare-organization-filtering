@@ -20,8 +20,8 @@
       background-color: $content-background;
       width: 100%;
       padding: 10px 0;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 10px 0;
+      // margin-bottom: 10px;
       border: 1px solid $content-border;
       -webkit-border-radius: 5px;
       border-radius: 5px;
@@ -52,5 +52,23 @@
 
 // laptop
 @media only screen and (min-width: $widescreen-monitor) {
+  .eligibility_filters {
+    width: 30%;
+    padding-left: 150px;
 
+    .section_heading {
+      text-align: left;
+      padding-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .filter_form {
+      margin: 0;
+      width: 100%;
+
+      .filter_type {
+        margin-bottom: 15px;
+      }
+    }
+  } 
 }
