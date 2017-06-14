@@ -1,7 +1,5 @@
 require "rails_helper"
-    # organization = FactoryGirl.create(:organization)
-    # location = FactoryGirl.create(:location, organization: organization)
-    # other_organization = FactoryGirl.create(:organization)
+
 describe "Filtering organizations" do
   scenario "inclusive filter" do
     eligibility = FactoryGirl.create(:eligibility)
