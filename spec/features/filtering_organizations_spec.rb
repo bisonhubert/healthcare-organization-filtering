@@ -6,6 +6,7 @@ describe "Filtering organizations" do
     other_eligibility = FactoryGirl.create(:eligibility, :update_name)
     organization = FactoryGirl.create(:organization, eligibilities: [eligibility])
     other_organization = FactoryGirl.create(:organization, eligibilities: [other_eligibility])
+    excluded_organization = FactoryGirl.create(:organization)
 
     visit root_path
 
@@ -17,6 +18,7 @@ describe "Filtering organizations" do
     click_button("Apply Filter")
     expect(page).to have_content(organization.name)
     expect(page).to have_content(other_organization.name)
+    expect(page).not_to have_content(excluded_organization.name)
   end
 
   scenario "exclusive filter" do
