@@ -1,7 +1,13 @@
-<% provide(:title, "All Organizations") %>
+<% provide(:title, "Resource Search") %>
 
-<h1>All Organizations</h1>
+<main>
+  <section class="eligibility_filters">
+    <%= render :partial => '/filters/eligibility_filters' %>
+  </section>
 
-<ul>
-  <%= render @organizations %>
-</ul>
+  <section class="organizations">
+    <ul class="organizations_list">
+      <%= render @organizations %>
+    </ul>
+  </section>
+</main>

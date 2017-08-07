@@ -1,0 +1,22 @@
+#form_submit {
+  color: $light-text;
+  background: $button-color;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  padding: 10px 30px;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+
+// laptop
+@media only screen and (min-width: $widescreen-monitor) {
+  #form_submit {
+    width: 45%;
+    float: right;
+  }
+}

@@ -14,4 +14,9 @@ describe Organization, type: :model do
 
     it { is_expected.to validate_presence_of(:description) }
   end
+
+  describe "associations" do
+    it { should have_many(:locations) }
+    it { should have_and_belong_to_many(:eligibilities) }
+  end
 end

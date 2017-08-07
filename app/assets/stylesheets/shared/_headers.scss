@@ -1,0 +1,27 @@
+.site_header {
+  background-color: $header-background-color;
+  
+  .page_heading {
+    text-align: center;
+    margin: 0;
+    padding: 25px 0;
+    font-size: 2em;
+    font-family: sans-serif;
+    font-weight: 200;
+    color: $light-text;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  } 
+}
+
+
+
+// laptop
+@media only screen and (min-width: $widescreen-monitor) {
+  .site_header {
+    .page_heading {
+      text-align: left;
+      padding: 75px 0 25px 150px;
+    }
+  }
+}

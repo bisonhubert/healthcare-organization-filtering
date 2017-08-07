@@ -1,8 +1,10 @@
-<li>
-  <div>
-    <%= link_to(organization.decorate.name, organization_path(organization)) %>
+<li class="organization_wrapper">
+  <div class="organization_name">
+    <%= link_to(organization.decorate.name, organization_path(organization), class: "organization_link") %>
   </div>
   <% organization.locations.each do |location| %>
-    <div><%= location.decorate.address %></div>
+    <div class="organization_location">
+      <%= location.decorate.address %>
+    </div>
   <% end %>
 </li>

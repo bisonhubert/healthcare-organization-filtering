@@ -1,0 +1,61 @@
+.organizations {
+  width: 100%;
+  padding-top: 25px;
+
+  .organizations_list {
+    list-style-type: none;
+    padding-left: 0;
+    width: 90%;
+    margin: 0 auto;
+
+    .organization_wrapper {
+      margin: 15px 0;
+      padding: 5px;
+      text-align: center;
+      background-color: $content-background;
+      border: 1px solid $content-border;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+
+      .organization_name {
+        color: $dark-text;
+        font-size: 1.2em;
+        line-height: 1.2;
+        margin: 5px 0;
+      }
+
+      .organization_location {
+        color: $dark-text;
+        line-height: 1.2;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+
+
+
+// laptop
+@media only screen and (min-width: $widescreen-monitor) {
+  main {
+    display: flex;
+    
+    .organizations {
+      width: 1;
+      padding-top: 67px;
+
+      .organizations_list {
+        width: 80%;
+
+        .organization_wrapper {
+          text-align: left;
+          padding: 15px 0 15px 20px;
+
+          .organization_name {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

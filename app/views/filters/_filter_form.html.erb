@@ -1,0 +1,14 @@
+<% Eligibility.all.each do |eligibility| %>
+  <div class="filter_type">
+    <%= check_box_tag("eligibilities[]", eligibility.name, false, :id => eligibility.id, class: "check_box" ) %>
+    <%= label_tag(eligibility.id, eligibility.name, class: "filter_label") %>
+  </div>
+<% end %>
+
+<div class="form_options_wrapper">
+  <%= render :partial => '/filters/form_options' %>
+</div>
+
+<div class="form_submit">
+  <%= submit_tag("Apply Filter", id: "form_submit") %>
+</div>
